@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Anek+Telugu&family=Silkscreen&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFF9EE;
+  font-family: 'Anek Telugu', sans-serif;
+}
+
+.h1 {
+  font-family: 'Aboreto', cursive;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.formWrapper {
+  display: flex;
+  justify-content: center;
+
+  .form {
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .disabled {
+    display: none;
+  }
+
+  .label {
+    margin-right: 1.5rem;
+  }
+
+  .submit {
+    font-family: 'Silkscreen', cursive;
+  }
+}
+
+.disabled {
+  display: none;
+}
+
+.bodyWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: stretch;
+  width: 75%;
+  margin: auto;
+
+  .body1, .body2 {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+
+  // .body1 {
+  //   align-items: flex-start;
+  // }
+
+  // .body2 {
+   
+  // }
+}
+
