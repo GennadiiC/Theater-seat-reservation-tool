@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+Imagine a theater with 127 seats.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It is is divided into several sections (e.g. auditorium, box left 1, balcony-mid, etc.) Two seats are considered adjacent if they are in the same row and in the same section, and they are next to each other.
 
-## Available Scripts
+First input parameter includes the number of currently reserved seats. It must amount to at least 20% of the total number of seats. After receiving it, the seats are reserved in a random order.
+Second parameter includes the number of visitors for whom we are searching adjacent seats (minimum 2, maximum 8 - with only even numbers accepted). 
 
-In the project directory, you can run:
+The app finds the best available alternative. 
 
-### `npm start`
+The higher price category a seat belongs to the better its location is. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+If two seats fall in the same price category, the order of section preference prevails: The most popular section is the Auditorium, then the Balcony-mid, followed by the left and right balconies (identical preference) and lastly, the boxes (identical preference).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In the event two or more seats are in the same section and in the same price category, the one(s) in the row closer to the stage is (are) considered better.
+If two or more seats are in the same row, the one(s) in the centre is (are) preferred. 
 
-### `npm test`
+Once you start, you'd see an input which receives the number of currently reserved seats. It accepts numbers in range from 43 (which is 20% of all seats) - to 209 (which is 8 seats less of total amount of seats)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After you submit an input parameter, you'll see the second input, as well as data about booked seats and free seats. As previously mentioned, the second input accepts the number of visitors for whom we are searching adjacent seats (minimum 2, maximum 8 - with only even numbers accepted). Submit this number and - voola! see the best adjacent pairs options available from free seats :)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
